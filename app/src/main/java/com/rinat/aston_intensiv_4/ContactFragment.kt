@@ -7,10 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class ContactFragment : Fragment() {
+
+private const val FIRST_FRAGMENT_KEY = "FIRST_FRAGMENT_KEY"
+class ContactFragment : Fragment(R.layout.fragment_contact) {
 
     companion object {
-        fun newInstance() = ContactFragment()
+
+        const val FIRST_FRAGMENT_TAG = "FIRST_FRAGMENT_TAG"
+
+        fun getInstance(): FirstFragment {
+            return FirstFragment().apply {
+                arguments = bundleOf(FIRST_FRAGMENT_KEY to "value")
+            }
+        }
     }
 
     private lateinit var viewModel: ContactViewModel
