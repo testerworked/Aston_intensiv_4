@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Aston_intensiv_4</string>
+    <string name="app_name">Aston_intensiv_Fragments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Contact List fragment</string>
+    <string name="open_contact_button">Open Contact Book</string>
+    <string name="text_hello">Check Fragments</string>
 </resources>

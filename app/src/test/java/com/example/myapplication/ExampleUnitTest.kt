@@ -1,4 +1,4 @@
-package com.rinat.aston_intensiv_4
+package com.example.myapplication
 
 import org.junit.Test
 
