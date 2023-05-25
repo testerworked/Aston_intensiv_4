@@ -25,6 +25,7 @@
         android:background="@android:color/holo_orange_dark"
         android:textColor="@color/black"
         android:layout_gravity="center"
+        tools:listitem="@layout/list_items"
         />
 
 

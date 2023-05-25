@@ -8,8 +8,6 @@ import android.widget.ArrayAdapter
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import android.widget.ListView
-import android.widget.Toast
-import java.nio.file.Files.find
 
 
 private const val FIRST_FRAGMENT_KEY = "FIRST_FRAGMENT_KEY"
@@ -50,8 +48,10 @@ class BlankFragment : Fragment() {
 
         val myListView = view.findViewById<ListView>(R.id.contactList)
 
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, items)
-        myListView.adapter = adapter
+        val adapter1 = ContactAdapter(view.context, items)
+
+        //val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, items)
+        myListView.adapter = adapter1
     }
 
 
