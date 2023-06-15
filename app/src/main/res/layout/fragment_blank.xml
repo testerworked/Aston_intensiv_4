@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlankFragment">
+    tools:context=".ContactListFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -39,12 +39,14 @@
 
         <EditText
             android:id="@+id/editTextText"
-            android:layout_width="553dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:background="#0B9FE3"
             android:ems="10"
             android:inputType="text"
-            android:text="Name"
+            android:text="Search in contact list"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

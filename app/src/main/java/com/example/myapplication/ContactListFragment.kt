@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import android.widget.ListView
@@ -13,7 +12,7 @@ import android.widget.ListView
 private const val FIRST_FRAGMENT_KEY = "FIRST_FRAGMENT_KEY"
 
 
-class BlankFragment : Fragment() {
+class ContactListFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -60,8 +59,8 @@ class BlankFragment : Fragment() {
         const val FIRST_FRAGMENT_TAG = "FIRST_FRAGMENT_TAG"
 
         @JvmStatic
-        fun getInstance(): BlankFragment {
-            return BlankFragment().apply {
+        fun getInstance(): ContactListFragment {
+            return ContactListFragment().apply {
                 arguments = bundleOf(FIRST_FRAGMENT_KEY to "value")
             }
         }

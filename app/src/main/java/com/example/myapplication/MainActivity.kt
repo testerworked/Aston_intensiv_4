@@ -4,11 +4,10 @@ import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.TextView
 import androidx.annotation.IdRes
-import com.example.myapplication.BlankFragment.Companion.FIRST_FRAGMENT_TAG
+import com.example.myapplication.ContactListFragment.Companion.FIRST_FRAGMENT_TAG
 import kotlin.concurrent.thread
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -33,7 +32,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                         buttonCheck.visibility = View.GONE
                         textHello.visibility = View.GONE
                         supportFragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container_view, BlankFragment.getInstance(), FIRST_FRAGMENT_TAG)
+                            .replace(R.id.fragment_container_view, ContactListFragment.getInstance(), FIRST_FRAGMENT_TAG)
                             .commit()
                     }
                 }

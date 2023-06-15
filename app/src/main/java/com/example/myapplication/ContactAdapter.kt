@@ -4,13 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 
 
-class ContactAdapter(private val context: Context, private val data: List<BlankFragment.Person>) : BaseAdapter(){
+class ContactAdapter(private val context: Context, private val data: List<ContactListFragment.Person>) : BaseAdapter(){
     private val inflater = LayoutInflater.from(context)
     private val itemList = data.toMutableList()
 
