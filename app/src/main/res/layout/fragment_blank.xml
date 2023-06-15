@@ -1,33 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BlankFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textFragmentContacts"
-        android:background="@android:color/holo_orange_dark"
-        android:textSize="28sp"
-        android:textColor="@color/black"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:gravity="bottom"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
 
+        <TextView
+            android:id="@+id/textFragmentContacts"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="bottom"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/contactList"
-        android:layout_width="match_parent"
-        android:layout_height="520dp"
-        android:background="@android:color/holo_orange_dark"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        tools:listitem="@layout/list_items"
-        />
+        <ListView
+            android:id="@+id/contactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSearch"
+            tools:ignore="MissingConstraints"
+            tools:listitem="@layout/list_items" />
 
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="553dp"
+            android:layout_height="80dp"
+            android:background="#0B9FE3"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textFragmentContacts" />
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="330dp"
+            android:layout_height="105dp"
+            android:textSize="38sp"
+            android:text="Search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
